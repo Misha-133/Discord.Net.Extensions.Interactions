@@ -7,14 +7,14 @@ namespace Discord.Net.Extensions.Interactions;
 ///     will be registered to with <see cref="InteractionServiceExtensions.RegisterCommandsAsync"/>.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public class GuildCommandAttribute : Attribute
+public class GuildModuleAttribute : Attribute
 {
     /// <summary>
     ///     Gets ids of guilds to register a module to.
     /// </summary>
     public ulong[] GuildsIds { get; }
 
-    public GuildCommandAttribute(params ulong[] guildIds)
+    public GuildModuleAttribute(params ulong[] guildIds)
     {
         GuildsIds = guildIds;
     }

@@ -6,7 +6,7 @@ public static class InteractionServiceExtensions
 {
     /// <summary>
     ///    Registers <see cref="InteractionModuleBase{T}"/> modules globally and to guilds set
-    ///    with <see cref="GuildCommandAttribute"/>.
+    ///    with <see cref="GuildModuleAttribute"/>.
     /// </summary>
     /// <param name="service"></param>
     /// <param name="deleteMissing"></param>
@@ -15,14 +15,14 @@ public static class InteractionServiceExtensions
     {
         await service.AddModulesGloballyAsync(deleteMissing, service.Modules.Where
         (
-            x => !x.Attributes.Any(attr => attr is GuildCommandAttribute)
+            x => !x.Attributes.Any(attr => attr is GuildModuleAttribute)
         ).ToArray());
 
         var moduleGroups = new Dictionary<ulong, List<ModuleInfo>>();
 
-        foreach (var module in service.Modules.Where(x => x.Attributes.Any(attr => attr is GuildCommandAttribute)))
+        foreach (var module in service.Modules.Where(x => x.Attributes.Any(attr => attr is GuildModuleAttribute)))
         {
-            var attribute = (GuildCommandAttribute)module.Attributes.First(x => x is GuildCommandAttribute);
+            var attribute = (GuildModuleAttribute)module.Attributes.First(x => x is GuildModuleAttribute);
 
             foreach (var guildId in attribute.GuildsIds)
             {
