@@ -1,5 +1,12 @@
 # Discord.Net.Extensions.Interactions
 
+  <a href="https://www.nuget.org/packages/Discord.Net.Extensions.Interactions/">
+    <img src="https://img.shields.io/nuget/vpre/Discord.Net.Extensions.Interactions.svg" alt="NuGet">
+  </a>
+  <a href="https://discord.gg/dnet">
+    <img src="https://discord.com/api/guilds/848176216011046962/widget.png" alt="Discord">
+  </a>
+
 An extension that provides additional functionality to [Discord.Net](https://github.com/discord-net/Discord.Net).Interactions package.
 
 ## Features
