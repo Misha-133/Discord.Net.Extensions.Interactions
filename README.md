@@ -1,7 +1,7 @@
 # Discord.Net.Extensions.Interactions
 <p align="center">
   <a href="https://www.nuget.org/packages/Discord.Net.Extensions.Interactions/">
-    <img src="https://img.shields.io/nuget/v/Discord.Net.Extensions.Interactions?style=plastic" alt="NuGet">
+    <img src="https://img.shields.io/nuget/v/Discord.Net.Extensions.Interactions?style=flat" alt="NuGet">
   </a>
   <a href="https://discord.gg/dnet">
     <img src="https://discord.com/api/guilds/848176216011046962/widget.png" alt="Discord">
