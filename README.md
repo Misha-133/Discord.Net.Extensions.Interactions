@@ -31,3 +31,7 @@ interactionService`RegisterCommandsAsync` extension method has be used to regist
 ```cs
 await interactionService.RegisterCommandsAsync();
 ```
+
+## Support
+
+Still have questions or want to request a feature? Contact me in [Discord.Net](https://discord.gg/dnet) discord server
