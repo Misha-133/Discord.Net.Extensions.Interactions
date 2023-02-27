@@ -3,7 +3,7 @@
 An extension that provides additional functionality to [Discord.Net](https://github.com/discord-net/Discord.Net).Interactions package.
 
 ## Features
-- [guild-only command modules]()
+- [guild-only command modules](https://github.com/Misha-133/Discord.Net.Extensions.Interactions#guild-only-commands)
 
 ## Examples
 ### Guild-only commands
