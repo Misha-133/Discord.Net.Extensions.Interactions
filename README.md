@@ -1,7 +1,7 @@
 # Discord.Net.Extensions.Interactions
 <p align="center">
   <a href="https://www.nuget.org/packages/Discord.Net.Extensions.Interactions/">
-    <img src="https://img.shields.io/nuget/vpre/Discord.Net.Extensions.Interactions.svg" alt="NuGet">
+    <img src="https://img.shields.io/nuget/v/Discord.Net.Extensions.Interactions?style=plastic" alt="NuGet">
   </a>
   <a href="https://discord.gg/dnet">
     <img src="https://discord.com/api/guilds/848176216011046962/widget.png" alt="Discord">
@@ -9,6 +9,9 @@
 </p>
 
 An extension that provides additional functionality to [Discord.Net](https://github.com/discord-net/Discord.Net).Interactions package.
+
+## Installation
+- [Nuget](https://www.nuget.org/packages/Discord.Net.Extensions.Interactions)
 
 ## Features
 - [guild-only command modules](https://github.com/Misha-133/Discord.Net.Extensions.Interactions#guild-only-commands)
