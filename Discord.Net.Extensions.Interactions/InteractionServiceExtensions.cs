@@ -15,12 +15,14 @@ public static class InteractionServiceExtensions
     {
         await service.AddModulesGloballyAsync(deleteMissing, service.Modules.Where
         (
-            x => !x.Attributes.Any(attr => attr is GuildModuleAttribute)
+            x => !x.Attributes.Any(attr => attr is GuildModuleAttribute) &&
+                 !x.Attributes.Any(attr => attr is DontAutoRegisterAttribute)
         ).ToArray());
 
         var moduleGroups = new Dictionary<ulong, List<ModuleInfo>>();
 
-        foreach (var module in service.Modules.Where(x => x.Attributes.Any(attr => attr is GuildModuleAttribute)))
+        foreach (var module in service.Modules.Where(x => x.Attributes.Any(attr => attr is GuildModuleAttribute) &&
+                                                          !x.Attributes.Any(attr => attr is DontAutoRegisterAttribute)))
         {
             var attribute = (GuildModuleAttribute)module.Attributes.First(x => x is GuildModuleAttribute);
 

@@ -9,8 +9,8 @@
     <PackageIcon>PackageLogo.png</PackageIcon>
     <PackageProjectUrl>https://github.com/Misha-133/Discord.Net.Extensions.Interactions</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
