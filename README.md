@@ -27,7 +27,7 @@ public class ExampleModule : InteractionModuleBase<SocketInteractionContext>
 }
 ```
 
-interactionService`RegisterCommandsAsync` extension method has be used to register commands. 
+interactionService`RegisterCommandsAsync` extension method has to be used to register commands. 
 ```cs
 await interactionService.RegisterCommandsAsync();
 ```
