@@ -24,14 +24,14 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="C:\Users\mihag\Downloads\PackageLogo.png">
+    <None Include="..\PackageLogo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Discord.Net.Interactions" Version="3.9.0" />
+    <PackageReference Include="Discord.Net.Interactions" Version="3.11.0" />
   </ItemGroup>
 
 </Project>

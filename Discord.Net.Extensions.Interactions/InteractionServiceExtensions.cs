@@ -13,16 +13,16 @@ public static class InteractionServiceExtensions
     /// <returns></returns>
     public static async Task RegisterCommandsAsync(this InteractionService service, bool deleteMissing = true)
     {
-        await service.AddModulesGloballyAsync(deleteMissing, service.Modules.Where
-        (
-            x => !x.Attributes.Any(attr => attr is GuildModuleAttribute) &&
-                 !x.Attributes.Any(attr => attr is DontAutoRegisterAttribute)
-        ).ToArray());
+        var registrableModules = service.Modules
+            .Where(x => (x.IsSlashGroup && x.IsTopLevelGroup || !x.IsSubModule)
+                        && !x.Attributes.Any(attr => attr is DontAutoRegisterAttribute)).ToArray();
+
+        await service.AddModulesGloballyAsync(deleteMissing, registrableModules
+            .Where(x => !x.Attributes.Any(attr => attr is GuildModuleAttribute)).ToArray());
 
         var moduleGroups = new Dictionary<ulong, List<ModuleInfo>>();
 
-        foreach (var module in service.Modules.Where(x => x.Attributes.Any(attr => attr is GuildModuleAttribute) &&
-                                                          !x.Attributes.Any(attr => attr is DontAutoRegisterAttribute)))
+        foreach (var module in registrableModules.Where(x => x.Attributes.Any(attr => attr is GuildModuleAttribute))) 
         {
             var attribute = (GuildModuleAttribute)module.Attributes.First(x => x is GuildModuleAttribute);
 
