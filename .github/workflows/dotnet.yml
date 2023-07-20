@@ -31,6 +31,6 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Publish package
-      run: dotnet nuget push "$NAMESPACE/bin/Release/$NAMESPACE.1.1.0.nupkg" --source "github" --api-key $ACCESS_TOKEN
+      run: dotnet nuget push "$NAMESPACE/bin/Release/$NAMESPACE.1.1.0.nupkg" --source "github" --api-key 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
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
