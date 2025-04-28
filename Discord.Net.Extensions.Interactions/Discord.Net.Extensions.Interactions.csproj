@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Discord.Net.Interactions" Version="3.17.1" />
+    <PackageReference Include="Discord.Net.Interactions" Version="3.17.4" />
   </ItemGroup>
 
 </Project>
